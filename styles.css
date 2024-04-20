@@ -1,0 +1,20 @@
+.chat-window {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #333;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#chat-history {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+#user-input {
+    width: 70%;
+}
+
+button {
+    width: 30%;
+}
