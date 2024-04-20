@@ -4,9 +4,9 @@ open System.Text.Json
 
 let handleQuestion question =
     match question with
-    | "hello" -> "Hi there!"
-    | "how are you?" -> "I'm just a bot, but thanks for asking!"
-    | _ -> "I'm sorry, I didn't understand the question."
+    | "cześć" -> "Witaj!"
+    | "jak się masz?" -> "Jestem tylko botem, ale dziękuję za zapytanie!"
+    | _ -> "Przepraszam, nie zrozumiałem pytania."
 
 [<EntryPoint>]
 let main argv =
@@ -14,7 +14,7 @@ let main argv =
     listener.Prefixes.Add("http://localhost:8000/")
     listener.Start()
 
-    printfn "Listening for connections..."
+    printfn "Nasłuchuję połączeń..."
 
     while true do
         let context = listener.GetContext()
@@ -35,4 +35,3 @@ let main argv =
         response.Close()
 
     0
-    
